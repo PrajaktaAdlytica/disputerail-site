@@ -1,0 +1,20 @@
+SOCIAL MARKS / THIRD-PARTY TRADEMARKS
+
+linkedin.svg and crunchbase.svg are the recognizable glyph paths distributed by Simple Icons v11.15.0, retrieved 15 October 2026:
+https://github.com/simple-icons/simple-icons/tree/11.15.0/icons
+https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/linkedin.svg
+https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/crunchbase.svg
+Simple Icons CC0 distribution license is included. Trademark rights are separate.
+
+Official reference assets included without modification:
+linkedin-official-black.png from LinkedIn's official in-logo.zip:
+https://brand.linkedin.com/downloads
+https://content.linkedin.com/content/dam/me/business/en-us/amp/xbu/linkedin-revised-brand-guidelines/logos/in-logo.zip
+crunchbase-official-wordmark.svg from the official press page:
+https://about.crunchbase.com/press
+https://cdn.prod.website-files.com/687e6d0359c517be389ea464/699cd6b24bf1f2f372ff4740_cb_logo_bluevector%20(1).svg
+
+The small SVG social glyphs are community-maintained reproductions, not newly drawn DisputeRail icons. The bundled official assets are provided as visual references. LinkedIn permits only its approved blue/black/white variants and prohibits reshaping, recolouring, combining or implying endorsement:
+https://brand.linkedin.com/in-logo
+
+Use each mark next to an accessible company profile link only when a real DisputeRail URL is supplied. The brand-kit footer labels those destinations pending; it has no placeholder href or invented profile. Preserve official proportions. No texture or morph effects on third-party marks. Confirm current brand guidance for final launch.

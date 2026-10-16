@@ -1,0 +1,31 @@
+.home-intro{height:100svh;min-height:420px;position:relative;isolation:isolate;overflow:hidden;background:#f5eedb;scroll-margin:0;color:#092e3a}
+.home-intro-film{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.intro-film-controls{position:absolute;inset:24px 32px;display:flex;align-items:flex-end;justify-content:flex-end;gap:20px;z-index:2;pointer-events:none}
+.intro-film-label{position:absolute;top:0;right:0;font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:#f5eedbe8;padding:10px 14px;border:1px solid #092e3a26}
+.intro-film-controls>div{display:flex;gap:10px;pointer-events:auto}
+.intro-control{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 16px;background:#f5eedbf0;border:1px solid #092e3a70;font-size:11px;font-weight:800;border-radius:3px;overflow:hidden;position:relative;isolation:isolate;transition:color .2s,background .2s}
+.intro-control:after{content:'';position:absolute;right:0;top:0;width:18px;height:18px;clip-path:polygon(100% 0,100% 100%,0 0);background:var(--orange);transform:translate(100%,-100%);transition:transform .25s var(--ease)}
+.intro-control:is(:hover,:focus-visible){background:var(--ink);color:var(--sheet)}
+.intro-control:is(:hover,:focus-visible):after{transform:translate(0,0)}
+.intro-control .icon{width:16px;height:16px}
+.intro-mobile-caption{display:none}
+/* Keep the header's measured height for chapter anchors, but never show site
+   navigation over the opening film. The cinematic controls are the only chrome. */
+[data-intro-visible=true]>.site-header,[data-intro-visible=true]>.chapter-navigation,[data-intro-visible=true]>.motion-toggle,[data-intro-visible=true]>.skip-link{visibility:hidden;pointer-events:none}
+@media(max-width:600px) and (orientation:portrait){
+ .home-intro{min-height:620px;background:#f5eedb url('/brand/backgrounds/paper-grain.svg')}
+ .home-intro-film{top:28%;height:48%;object-fit:contain}
+ .intro-mobile-caption{display:block;position:absolute;top:max(34px,env(safe-area-inset-top));left:24px;right:24px}
+ .intro-mobile-caption>span{font-size:8px;letter-spacing:.18em;font-weight:800;text-transform:uppercase}
+ .intro-mobile-caption p{font-size:clamp(27px,7.5vw,38px);font-weight:800;line-height:1.15;letter-spacing:-.04em;margin-top:15px}
+ .intro-mobile-caption em{font-family:var(--serif);font-weight:560;font-style:normal}
+ .intro-film-controls{inset:auto 20px max(24px,env(safe-area-inset-bottom));flex-direction:column;align-items:stretch;gap:14px}
+ .intro-film-label{position:static;font-size:8px;text-align:center;background:transparent;border:0;padding:0}
+ .intro-film-controls>div{justify-content:space-between;gap:12px}
+ .intro-control{font-size:11px;min-height:46px}
+ .intro-continue{flex:1}
+}
+@media(prefers-reduced-motion:reduce){.intro-control,.intro-control:after{transition:none}}
+/* Pin-spacer teardown must not let browser scroll anchoring pull the hero back
+   into the film when the visitor switches motion on or off. */
+[data-intro-visible]{overflow-anchor:none}
