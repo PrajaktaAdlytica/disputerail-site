@@ -1,0 +1,17 @@
+# DisputeRail: static React SPA at the domain root.
+DirectoryIndex index.html
+Options -Indexes -MultiViews
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Never expose Git metadata if the hosting integration retains it.
+RewriteRule ^\.git(?:/|$) - [F,L]
+# Real files and directories retain normal static serving.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+# Missing static assets should be 404s, not HTML responses.
+RewriteRule ^(?:assets|brand|images|video)/ - [L]
+# Client-side routes load React.
+RewriteRule ^ index.html [L]
+</IfModule>
